@@ -29,6 +29,6 @@ export const infos = [
 export const navigation = [
   { name: "Accueil", href: "#" },
   { name: "Boutiques", href: "#" },
-  { name: "Contact", href: "#" },
+  { name: "Contact", href: "#form" },
   { name: "FAQ", href: "#" },
 ];

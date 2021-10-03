@@ -3,7 +3,7 @@ import React from "react";
 const Form = () => {
   return (
     <>
-      <div className="hidden mx-10 sm:block " aria-hidden="true">
+      <div className="hidden mx-10 sm:block " id="form" aria-hidden="true">
         <div className="py-5">
           <div className="border-t border-gray-200" />
         </div>
@@ -22,7 +22,7 @@ const Form = () => {
             </div>
           </div>
           <div className="mt-5 md:mt-0 md:col-span-2">
-            <form action="#" method="POST">
+            <form action="#f" method="POST">
               <div className="shadow overflow-hidden sm:rounded-md">
                 <div className="px-4 py-5 bg-white sm:p-6">
                   <div className="grid grid-cols-6 gap-6">

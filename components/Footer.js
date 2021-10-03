@@ -23,7 +23,10 @@ const Footer = () => {
               question an uncited claim. If your work has been tagged */}
             </p>
             <div className="w-44 pt-6 md:pt-0">
-              <a className="bg-green-500 justify-center text-center rounded-lg shadow px-10 py-3 flex items-center">
+              <a
+                href="#form"
+                className="bg-green-500 justify-center text-center rounded-lg shadow px-10 py-3 flex items-center"
+              >
                 Contact
               </a>
             </div>
