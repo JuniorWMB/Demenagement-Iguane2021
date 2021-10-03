@@ -8,15 +8,19 @@ const Footer = () => {
     <>
       <div className="w-full mt-48 min-h-screen flex items-center justify-center bg-black">
         <div className="md:w-2/3 w-full px-4 text-white flex flex-col">
-          <div className="w-full text-7xl font-bold">
+          <div className="w-full text-7xl font-bold mt-10">
             <h1 className="w-full md:w-2/3">
               Comment peut on vous aider. restons en contact
             </h1>
           </div>
           <div className="flex mt-8 flex-col md:flex-row md:justify-between">
             <p className="w-full md:w-2/3 text-gray-400">
-              To ensure that all Wikipedia content is verifiable, anyone may
-              question an uncited claim. If your work has been tagged
+              Nous sommes ouvert du Lundi au Vendredi. <br />
+              De 8h30 à 12h00 et de 14h00 à 18h00. <br />
+              Au 16 rue Cantal, 91090 Lisses. <br />
+              Tel: 06 15 77 13 30
+              {/* To ensure that all Wikipedia content is verifiable, anyone may
+              question an uncited claim. If your work has been tagged */}
             </p>
             <div className="w-44 pt-6 md:pt-0">
               <a className="bg-green-500 justify-center text-center rounded-lg shadow px-10 py-3 flex items-center">
@@ -44,18 +48,7 @@ const Footer = () => {
                   {nav.name}
                 </a>
               ))}
-              {/* <a className="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase">
-                About
-              </a>
-              <a className="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase">
-                Services
-              </a>
-              <a className="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase">
-                Why us
-              </a>
-              <a className="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase">
-                Contact
-              </a> */}
+
               <div className="flex flex-row space-x-8 items-center justify-between">
                 <a>
                   <svg
@@ -110,9 +103,12 @@ const Footer = () => {
               </div>
             </div>
             <hr className="border-gray-600" />
-            <p className="w-full text-center my-12 text-gray-600">
+            <a
+              href="https://www.juniorwembopaportfolio.com/"
+              className="w-full text-center my-12 text-gray-600 hover:text-green-600"
+            >
               Copyright © 2021 HopeWeb Creative
-            </p>
+            </a>
           </div>
         </div>
       </div>
