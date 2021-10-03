@@ -3,6 +3,7 @@ import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import Box from "../public/box2.jpg";
 import Image from "next/image";
+import Logo from "../public/logo.webp";
 
 const navigation = [
   { name: "Accueil", href: "#" },
@@ -46,6 +47,13 @@ export default function Header() {
                   </div>
                 </div>
                 <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
+                  <Image
+                    src={Logo}
+                    width={70}
+                    height={60}
+                    alt="logo iguane "
+                    quality="100"
+                  />
                   {navigation.map((item) => (
                     <a
                       key={item.name}
