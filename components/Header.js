@@ -130,6 +130,7 @@ export default function Header() {
           src={Box}
           alt=""
           layout="fill"
+          priority
         />
       </div>
     </div>
