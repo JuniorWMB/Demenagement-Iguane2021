@@ -38,7 +38,8 @@ const Form = () => {
                         name="first-name"
                         id="first-name"
                         autoComplete="given-name"
-                        className="mt-1 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                        className="mt-1 
+                        p-2 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                       />
                     </div>
 
@@ -54,7 +55,8 @@ const Form = () => {
                         name="last-name"
                         id="last-name"
                         autoComplete="family-name"
-                        className="mt-1 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                        className="mt-1 
+                        p-2 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                       />
                     </div>
 
@@ -70,7 +72,8 @@ const Form = () => {
                         name="email-address"
                         id="email-address"
                         autoComplete="email"
-                        className="mt-1 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                        className="mt-1 
+                        p-2 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                       />
                     </div>
 
@@ -86,7 +89,8 @@ const Form = () => {
                         name="street-address"
                         id="street-address"
                         autoComplete="street-address"
-                        className="mt-1 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                        className="mt-1 focus:ring-green-500 
+                        p-2 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                       />
                     </div>
 
@@ -101,7 +105,8 @@ const Form = () => {
                         type="text"
                         name="city"
                         id="city"
-                        className="mt-1 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                        className="mt-1
+                        p-2 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                       />
                     </div>
 
@@ -117,9 +122,30 @@ const Form = () => {
                         name="phone"
                         id="phone"
                         // autoComplete="phone"
-                        className="mt-1 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                        className="mt-1
+                        p-2
+                        focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                       />
                     </div>
+                  </div>
+                  <div>
+                    <label
+                      htmlFor="info"
+                      className="block text-sm font-medium text-gray-700
+                      mt-8
+                      "
+                    >
+                      Que pouvons nous faire pour vous ?
+                    </label>
+                    <textarea
+                      name=""
+                      id=""
+                      cols="70"
+                      rows="10"
+                      className="p-2
+                      mt-1 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md
+                      "
+                    ></textarea>
                   </div>
                 </div>
                 <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">

@@ -5,7 +5,7 @@ import Nav from "../components/Nav";
 
 const devis = () => {
   return (
-    <div>
+    <div className="">
       <Nav />
       <BoxChoice />
       {/* blockDevis */}

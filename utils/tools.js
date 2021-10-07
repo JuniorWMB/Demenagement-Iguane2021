@@ -37,8 +37,8 @@ export const infos = [
 ];
 
 export const navigation = [
-  { name: "Accueil", href: "#" },
-  { name: "Boutiques", href: "#" },
+  { name: "Accueil", href: "/" },
+  { name: "Boutiques", href: "/shop" },
   { name: "Contact", href: "#form" },
   { name: "FAQ", href: "#" },
 ];

@@ -1,18 +1,14 @@
-import { Fragment } from "react";
-import { Popover, Transition } from "@headlessui/react";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import Box from "../public/box2.jpg";
 import Image from "next/image";
-import Logo from "../public/logo.webp";
 import Nav from "./Nav";
 import Link from "next/link";
 
-const navigation = [
-  { name: "Accueil", href: "/" },
-  { name: "Boutiques", href: "#" },
-  { name: "Contact", href: "#form" },
-  { name: "FAQ", href: "#" },
-];
+// const navigation = [
+//   { name: "Accueil", href: "/" },
+//   { name: "Boutiques", href: "/shop/" },
+//   { name: "Contact", href: "#form" },
+//   { name: "FAQ", href: "#" },
+// ];
 
 export default function Header() {
   return (
