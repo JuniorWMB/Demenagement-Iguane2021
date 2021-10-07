@@ -3,13 +3,14 @@ import Image from "next/image";
 
 const MainInfo = ({ info, title, picture, subTitle }) => {
   return (
-    <div className="overflow-hidden shadow-lg rounded-lg h-full w-60 md:w-80 cursor-pointer m-auto ml-4">
-      <a href="#" className="w-full block h-full">
+    <div className="overflow-hidden rounded-lg h-[400px] w-60 md:w-80 cursor-pointer m-auto ml-4 shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
+      <a href="#" className="w-full block h-full border-2 ">
         <Image
           alt="blog photo"
           src={picture}
           className="max-h-20 w-full object-cover"
           layout="responsive"
+          height="350px"
           priority
         />
         <div className="bg-white dark:bg-gray-800 w-full p-4">

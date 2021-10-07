@@ -1,13 +1,12 @@
 import BoxZero from "../public/boxchat.jpg";
-import BoxTwo from "../public/entrepot.jpg";
+import BoxTwo from "../public/entrepotok.jpg";
 import BoxFour from "../public/payement.jpg";
 
 import manDem from "../public/mandem.jpg";
 import manBoxInfo from "../public/manbox.jpg";
-import manDemTruck from "../public/demman.jpg";
+import manDemTruck from "../public/homedem.jpg";
 
 import {
-  FireIcon,
   LightBulbIcon,
   LightningBoltIcon,
   QuestionMarkCircleIcon,
