@@ -12,6 +12,7 @@ const Main = () => {
             info={info.info}
             picture={info.picture}
             subTitle={info.subTitle}
+            href={info.href}
           />
         </div>
       ))}

@@ -19,6 +19,7 @@ export const infos = [
     subTitle: ".01",
     info: "Déménagement de particuliers ou professionnels,débarras,monte meuble.",
     picture: BoxZero,
+    href: "/devis",
   },
   {
     id: 2,
@@ -26,6 +27,7 @@ export const infos = [
     subTitle: ".02",
     info: "En rack ou au sol dans un entrepôt chauffer et sécuriser. Réception, préparation et expédition de vos marchandises.",
     picture: BoxTwo,
+    href: "/",
   },
   {
     id: 3,
@@ -33,6 +35,7 @@ export const infos = [
     subTitle: ".03",
     info: "Nous proposons une large sélection de produits indispensable pour votre déménagement (cartons, adhesifs, housses etc...).",
     picture: BoxFour,
+    href: "/shop",
   },
 ];
 
@@ -50,6 +53,7 @@ export const choice = [
     subTitle: <LightBulbIcon />,
     info: "Vous connaissez votre volume, il vous suffis de le renseigner ci-dessous.",
     picture: manDem,
+    href: "/",
   },
   {
     id: 2,
@@ -57,6 +61,7 @@ export const choice = [
     subTitle: <LightningBoltIcon />,
     info: "Vous ne connaissez pas  votre volume, il vous suffis de clicker ici et de vous laissez guider.",
     picture: manDemTruck,
+    href: "/",
   },
   {
     id: 3,
@@ -64,5 +69,6 @@ export const choice = [
     subTitle: <QuestionMarkCircleIcon />,
     info: "Vous pouvez nous contacter en cliquant ici et en renseignant vos besoins.",
     picture: manBoxInfo,
+    href: "/",
   },
 ];

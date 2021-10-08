@@ -15,6 +15,7 @@ const BoxChoice = () => {
               // subTitle={c.subTitle}
               info={c.info}
               picture={c.picture}
+              href={c.href}
             />
           </div>
         ))}

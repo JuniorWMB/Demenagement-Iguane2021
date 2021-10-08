@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
 
-const MainInfo = ({ info, title, picture, subTitle }) => {
+const MainInfo = ({ info, title, picture, subTitle, href }) => {
   return (
     <div className="overflow-hidden rounded-lg h-[400px] w-60 md:w-80 cursor-pointer m-auto ml-4 shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
-      <a href="#" className="w-full block h-full border-2 ">
+      <a href={href} className="w-full block h-full border-2 ">
         <Image
           alt="blog photo"
           src={picture}
