@@ -69,6 +69,6 @@ export const choice = [
     subTitle: <QuestionMarkCircleIcon />,
     info: "Vous pouvez nous contacter en cliquant ici et en renseignant vos besoins.",
     picture: manBoxInfo,
-    href: "/",
+    href: "#form",
   },
 ];

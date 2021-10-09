@@ -3,6 +3,7 @@ import Timeline from "./Timeline";
 import { choice } from "../../utils/tools";
 import MainInfo from "../MainInfo";
 import Form from "../Form";
+import DevisInfos from "./DevisInfos";
 
 const BoxChoice = () => {
   return (
@@ -20,6 +21,7 @@ const BoxChoice = () => {
           </div>
         ))}
       </div>
+      <DevisInfos />
       <Form />
     </>
   );
