@@ -4,7 +4,7 @@ import { infos } from "../utils/tools";
 
 const Main = () => {
   return (
-    <div className="flex  justify-center my-12 h-[400px] ">
+    <div className="flex  justify-center my-12 h-[400px] flex-col overflow-hidden overflow-x-auto flex-wrap md:overscroll-none">
       {infos.map((info, index) => (
         <div className="flex " key={info.id}>
           <MainInfo

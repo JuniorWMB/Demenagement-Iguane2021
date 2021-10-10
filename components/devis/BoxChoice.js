@@ -8,7 +8,7 @@ import DevisInfos from "./DevisInfos";
 const BoxChoice = () => {
   return (
     <>
-      <div className="flex justify-center mt-36 h-[600px] items-center ">
+      <div className="flex justify-center mt-36 h-[600px] w-full items-center flex-col overflow-hidden overflow-x-auto flex-wrap md:overscroll-none ">
         {choice.map((c, index) => (
           <div key={index} className="">
             <MainInfo
