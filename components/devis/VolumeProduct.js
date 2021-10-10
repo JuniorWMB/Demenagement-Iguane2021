@@ -26,17 +26,12 @@ const VolumeProduct = () => {
     <div className=" h-3/4 box-content  md:w-full">
       <div className="flex flex-col h-full break-all  md:">
         <div
-          style={{
-            borderBottom: "2px solid #eaeaea",
-          }}
+          // style={{
+          //   borderBottom: "2px solid #eaeaea",
+          // }}
           className="flex-wrap "
         >
-          {/* 
-<button type="button" class="py-2 px-4  bg-green-600 hover:bg-green-700 focus:ring-green-500 focus:ring-offset-green-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 ">
-    Square is me
-</button> */}
-
-          <ul className="flex h-1/5 border  cursor-pointer flex-wrap  md:flex-nowrap">
+          <ul className="flex  border  cursor-pointer flex-wrap  md:flex-nowrap  ">
             <li
               className={
                 toggleState === 1
