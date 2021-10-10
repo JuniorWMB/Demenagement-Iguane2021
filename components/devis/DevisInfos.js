@@ -3,7 +3,7 @@ import IknowMyVolume from "./IknowMyVolume";
 
 const DevisInfos = () => {
   return (
-    <div className="border-2 border-green-700 h-[900px]">
+    <div className=" h-[1000px]">
       <IknowMyVolume />
       {/* <IDontKnowMyVolume/> */}
     </div>

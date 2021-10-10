@@ -4,12 +4,12 @@ import Buttons from "./Buttons";
 import VolumeProduct from "./VolumeProduct";
 const IknowMyVolume = () => {
   return (
-    <div className="border-2 border-red-800 mb-24 p-10 h-full ">
-      <div className="flex-col  md:bg-red-700 flex h-full w-full  md:flex-row">
+    <div className="p-2  h-full">
+      <div className="flex-col justify-center place-content-evenly md: relative flex h-full w-full ">
         <VolumeProduct />
         <BasketVolume />
+        <Buttons />
       </div>
-      <Buttons />
     </div>
   );
 };

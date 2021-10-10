@@ -23,23 +23,24 @@ const VolumeProduct = () => {
   };
 
   return (
-    <div className="border-green-500 border-2 h-full mb-4 md:w-full">
-      {/* test */}
-
-      {/* test */}
-
-      <div className="flex flex-col  relative h-full break-all border border-green-200 md:">
+    <div className=" h-3/4 box-content  md:w-full">
+      <div className="flex flex-col h-full break-all  md:">
         <div
           style={{
             borderBottom: "2px solid #eaeaea",
           }}
           className="flex-wrap "
         >
-          <ul className="flex cursor-pointer flex-wrap border-red-700 border-2 md:flex-nowrap">
+          {/* 
+<button type="button" class="py-2 px-4  bg-green-600 hover:bg-green-700 focus:ring-green-500 focus:ring-offset-green-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 ">
+    Square is me
+</button> */}
+
+          <ul className="flex h-1/5 border  cursor-pointer flex-wrap  md:flex-nowrap">
             <li
               className={
                 toggleState === 1
-                  ? "p-3 text-center w-full   bg-gray-200 box-content relative outline-none  border-b-0 border-gray-600 bg-white border-b border"
+                  ? "py-2 px-4  bg-green-600 hover:bg-green-700 focus:ring-green-500 focus:ring-offset-green-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 "
                   : " p-3 text-center w-full bg-gray-200 box-content relative outline-none  border-b-0 border-gray-600"
               }
               onClick={() => toggleTab(1)}
@@ -49,7 +50,7 @@ const VolumeProduct = () => {
             <li
               className={
                 toggleState === 2
-                  ? "p-3 text-center w-full bg-gray-200 box-content relative outline-none  border-b-0 border-gray-600 bg-white border-b border"
+                  ? "py-2 px-4  bg-green-600 hover:bg-green-700 focus:ring-green-500 focus:ring-offset-green-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 "
                   : "p-3 text-center w-full bg-gray-200 box-content relative outline-none  border-b-0 border-gray-600"
               }
               onClick={() => toggleTab(2)}
@@ -59,7 +60,7 @@ const VolumeProduct = () => {
             <li
               className={
                 toggleState === 3
-                  ? "p-3 text-center w-full bg-gray-200 box-content relative outline-none  border-b-0 border-gray-600 bg-white border-b border"
+                  ? "py-2 px-4  bg-green-600 hover:bg-green-700 focus:ring-green-500 focus:ring-offset-green-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 "
                   : "p-3 text-center w-full bg-gray-200 box-content relative outline-none  border-b-0 border-gray-600"
               }
               onClick={() => toggleTab(3)}
@@ -69,7 +70,7 @@ const VolumeProduct = () => {
             <li
               className={
                 toggleState === 4
-                  ? "p-3 text-center w-full bg-gray-200 box-content relative outline-none  border-b-0 border-gray-600 bg-white border-b border"
+                  ? "py-2 px-4  bg-green-600 hover:bg-green-700 focus:ring-green-500 focus:ring-offset-green-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 "
                   : "p-3 text-center w-full bg-gray-200 box-content relative outline-none  border-b-0 border-gray-600"
               }
               onClick={() => toggleTab(4)}
@@ -79,7 +80,7 @@ const VolumeProduct = () => {
             <li
               className={
                 toggleState === 5
-                  ? "p-3 text-center w-full bg-gray-200 box-content relative outline-none  border-b-0 border-gray-600 bg-white border-b border"
+                  ? "py-2 px-4  bg-green-600 hover:bg-green-700 focus:ring-green-500 focus:ring-offset-green-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 "
                   : "p-3 text-center w-full bg-gray-200 box-content relative outline-none  border-b-0 border-gray-600"
               }
               onClick={() => toggleTab(5)}
@@ -89,7 +90,7 @@ const VolumeProduct = () => {
             <li
               className={
                 toggleState === 6
-                  ? "p-3 text-center w-full bg-gray-200 box-content relative outline-none  border-b-0 border-gray-600 bg-white border-b border"
+                  ? "py-2 px-4  bg-green-600 hover:bg-green-700 focus:ring-green-500 focus:ring-offset-green-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 "
                   : "p-3 text-center w-full bg-gray-200 box-content relative outline-none  border-b-0 border-gray-600"
               }
               onClick={() => toggleTab(6)}
@@ -99,7 +100,7 @@ const VolumeProduct = () => {
             <li
               className={
                 toggleState === 7
-                  ? "p-3 text-center w-full bg-gray-200 box-content relative outline-none  border-b-0 border-gray-600 bg-white border-b border"
+                  ? "py-2 px-4  bg-green-600 hover:bg-green-700 focus:ring-green-500 focus:ring-offset-green-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 "
                   : "p-3 text-center w-full bg-gray-200 box-content relative outline-none  border-b-0 border-gray-600"
               }
               onClick={() => toggleTab(7)}
@@ -109,7 +110,7 @@ const VolumeProduct = () => {
             <li
               className={
                 toggleState === 8
-                  ? "p-3 text-center w-full bg-gray-200 box-content relative outline-none  border-b-0 border-gray-600 bg-white border-b border"
+                  ? "py-2 px-4  bg-green-600 hover:bg-green-700 focus:ring-green-500 focus:ring-offset-green-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 "
                   : "p-3 text-center w-full bg-gray-200 box-content relative outline-none  border-b-0 border-gray-600"
               }
               onClick={() => toggleTab(8)}
@@ -119,7 +120,7 @@ const VolumeProduct = () => {
             <li
               className={
                 toggleState === 9
-                  ? "p-3 text-center w-full bg-gray-200 box-content relative outline-none  border-b-0 border-gray-600 bg-white border-b border"
+                  ? "py-2 px-4  bg-green-600 hover:bg-green-700 focus:ring-green-500 focus:ring-offset-green-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 "
                   : "p-3 text-center w-full bg-gray-200 box-content relative outline-none  border-b-0 border-gray-600"
               }
               onClick={() => toggleTab(9)}
@@ -129,7 +130,7 @@ const VolumeProduct = () => {
             <li
               className={
                 toggleState === 10
-                  ? "p-3 text-center w-full bg-gray-200 box-content relative outline-none  border-b-0 border-gray-600 bg-white border-b border"
+                  ? "py-2 px-4  bg-green-600 hover:bg-green-700 focus:ring-green-500 focus:ring-offset-green-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 "
                   : "p-3 text-center w-full bg-gray-200 box-content relative outline-none  border-b-0 border-gray-600"
               }
               onClick={() => toggleTab(10)}
@@ -155,11 +156,11 @@ const VolumeProduct = () => {
               <div className="w-full h-full text-center">
                 <div className="flex h-full flex-col justify-between">
                   <Image alt={item.name} src={item.picture} width={10} />
-                  <p className="absolute text-sm italic dark:text-white text-gray-800 top-2 right-2">
+                  <p className="absolute text-sm italic dark:text-white text-indigo-500 text-md font-medium top-2 right-2">
                     {item.volume}m3
                   </p>
 
-                  <p className="text-gray-900 dark:text-white text-lg mt-4">
+                  <p className="text-gray-400 dark:text-gray-300 font-light text-md">
                     {item.name}
                   </p>
                   <p className="dark:text-gray-50 text-gray-700 text-xs font-thin py-2 px-6"></p>
@@ -189,11 +190,11 @@ const VolumeProduct = () => {
                     src={desk.picture === null ? notFound : desk.picture}
                     alt={desk.name}
                   />
-                  <p className="absolute text-sm italic dark:text-white text-gray-800 top-2 right-2">
+                  <p className="absolute text-sm italic dark:text-white text-indigo-500 text-md font-medium top-2 right-2">
                     {desk.volume}m3
                   </p>
 
-                  <p className="text-gray-900 dark:text-white text-lg mt-4">
+                  <p className="text-gray-400 dark:text-gray-300 font-light text-md">
                     {desk.name}
                   </p>
                   <p className="dark:text-gray-50 text-gray-700 text-xs font-thin py-2 px-6"></p>
@@ -223,11 +224,11 @@ const VolumeProduct = () => {
                     src={desk.picture === null ? notFound : desk.picture}
                     alt={desk.name}
                   />
-                  <p className="absolute text-sm italic dark:text-white text-gray-800 top-2 right-2">
+                  <p className="absolute text-sm italic dark:text-white text-indigo-500 text-md font-medium top-2 right-2">
                     {desk.volume}m3
                   </p>
 
-                  <p className="text-gray-900 dark:text-white text-lg mt-4">
+                  <p className="text-gray-400 dark:text-gray-300 font-light text-md">
                     {desk.name}
                   </p>
                   <p className="dark:text-gray-50 text-gray-700 text-xs font-thin py-2 px-6"></p>
@@ -257,11 +258,11 @@ const VolumeProduct = () => {
                     src={desk.picture === null ? notFound : desk.picture}
                     alt={desk.name}
                   />
-                  <p className="absolute text-sm italic dark:text-white text-gray-800 top-2 right-2">
+                  <p className="absolute text-sm italic dark:text-white text-indigo-500 text-md font-medium top-2 right-2">
                     {desk.volume}m3
                   </p>
 
-                  <p className="text-gray-900 dark:text-white text-lg mt-4">
+                  <p className="text-gray-400 dark:text-gray-300 font-light text-md">
                     {desk.name}
                   </p>
                   <p className="dark:text-gray-50 text-gray-700 text-xs font-thin py-2 px-6"></p>
@@ -290,11 +291,11 @@ const VolumeProduct = () => {
                     src={desk.picture === null ? notFound : desk.picture}
                     alt={desk.name}
                   />
-                  <p className="absolute text-sm italic dark:text-white text-gray-800 top-2 right-2">
+                  <p className="absolute text-sm italic dark:text-white text-indigo-500 text-md font-medium top-2 right-2">
                     {desk.volume}m3
                   </p>
 
-                  <p className="text-gray-900 dark:text-white text-lg mt-4">
+                  <p className="text-gray-400 dark:text-gray-300 font-light text-md">
                     {desk.name}
                   </p>
                   <p className="dark:text-gray-50 text-gray-700 text-xs font-thin py-2 px-6"></p>
@@ -323,11 +324,11 @@ const VolumeProduct = () => {
                     src={desk.picture === null ? notFound : desk.picture}
                     alt={desk.name}
                   />
-                  <p className="absolute text-sm italic dark:text-white text-gray-800 top-2 right-2">
+                  <p className="absolute text-sm italic dark:text-white text-indigo-500 text-md font-medium top-2 right-2">
                     {desk.volume}m3
                   </p>
 
-                  <p className="text-gray-900 dark:text-white text-lg mt-4">
+                  <p className="text-gray-400 dark:text-gray-300 font-light text-md">
                     {desk.name}
                   </p>
                   <p className="dark:text-gray-50 text-gray-700 text-xs font-thin py-2 px-6"></p>
@@ -357,11 +358,11 @@ const VolumeProduct = () => {
                     src={desk.picture === null ? notFound : desk.picture}
                     alt={desk.name}
                   />
-                  <p className="absolute text-sm italic dark:text-white text-gray-800 top-2 right-2">
+                  <p className="absolute text-sm italic dark:text-white text-indigo-500 text-md font-medium top-2 right-2">
                     {desk.volume}m3
                   </p>
 
-                  <p className="text-gray-900 dark:text-white text-lg mt-4">
+                  <p className="text-gray-400 dark:text-gray-300 font-light text-md">
                     {desk.name}
                   </p>
                   <p className="dark:text-gray-50 text-gray-700 text-xs font-thin py-2 px-6"></p>
@@ -391,11 +392,11 @@ const VolumeProduct = () => {
                     src={desk.picture === null ? notFound : desk.picture}
                     alt={desk.name}
                   />
-                  <p className="absolute text-sm italic dark:text-white text-gray-800 top-2 right-2">
+                  <p className="absolute text-sm italic dark:text-white text-indigo-500 text-md font-medium top-2 right-2">
                     {desk.volume}m3
                   </p>
 
-                  <p className="text-gray-900 dark:text-white text-lg mt-4">
+                  <p className="text-gray-400 dark:text-gray-300 font-light text-md">
                     {desk.name}
                   </p>
                   <p className="dark:text-gray-50 text-gray-700 text-xs font-thin py-2 px-6"></p>
@@ -425,11 +426,11 @@ const VolumeProduct = () => {
                     src={desk.picture === null ? notFound : desk.picture}
                     alt={desk.name}
                   />
-                  <p className="absolute text-sm italic dark:text-white text-gray-800 top-2 right-2">
+                  <p className="absolute text-sm italic dark:text-white text-indigo-500 text-md font-medium top-2 right-2">
                     {desk.volume}m3
                   </p>
 
-                  <p className="text-gray-900 dark:text-white text-lg mt-4">
+                  <p className="text-gray-400 dark:text-gray-300 font-light text-md">
                     {desk.name}
                   </p>
                   <p className="dark:text-gray-50 text-gray-700 text-xs font-thin py-2 px-6"></p>
@@ -459,11 +460,11 @@ const VolumeProduct = () => {
                     src={desk.picture === null ? notFound : desk.picture}
                     alt={desk.name}
                   />
-                  <p className="absolute text-sm italic dark:text-white text-gray-800 top-2 right-2">
+                  <p className="absolute text-sm italic dark:text-white text-indigo-500 text-md font-medium top-2 right-2">
                     {desk.volume}m3
                   </p>
 
-                  <p className="text-gray-900 dark:text-white text-lg mt-4">
+                  <p className="text-gray-400 dark:text-gray-300 font-light text-md">
                     {desk.name}
                   </p>
                   <p className="dark:text-gray-50 text-gray-700 text-xs font-thin py-2 px-6"></p>
