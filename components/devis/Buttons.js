@@ -11,7 +11,7 @@ const Buttons = () => {
     setNavCalculDevis(navCalculDevis - 1);
   };
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-around">
       <button
         type="button"
         className={

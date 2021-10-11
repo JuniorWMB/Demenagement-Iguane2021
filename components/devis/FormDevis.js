@@ -11,15 +11,17 @@ const FormDevis = () => {
           {/* <!-- Row --> */}
           <div className="w-full xl:w-3/4 lg:w-11/12 flex">
             {/* <!-- Col --> */}
-            <Image
-              src={Box1}
-              alt="image carton"
-              height={600}
-              width={350}
-              layout="fixed"
-              quality={100}
-              priority
-            />
+            <div className="w-full h-auto hidden lg:block lg:w-5/12 bg-cover rounded-l-lg">
+              <Image
+                src={Box1}
+                alt="image carton"
+                height={600}
+                width={400}
+                layout="fixed"
+                quality={100}
+                priority
+              />
+            </div>
 
             <div className="w-full lg:w-7/12 bg-white p-5 rounded-lg lg:rounded-l-none">
               <h3 className="pt-4 text-2xl text-center">
