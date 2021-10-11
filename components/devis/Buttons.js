@@ -3,13 +3,9 @@ import { ContextStore } from "../../context/context";
 
 const Buttons = () => {
   const { navCalculDevis, setNavCalculDevis } = useContext(ContextStore);
-  console.log("here", navCalculDevis);
 
   const navNext = () => {
     setNavCalculDevis(navCalculDevis + 1);
-    if (navCalculDevis === 0) {
-      return;
-    }
   };
   const navPrevious = () => {
     setNavCalculDevis(navCalculDevis - 1);
