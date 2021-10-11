@@ -1,11 +1,14 @@
 import Layout from "../components/Layout";
+import { NavCalcul } from "../context/context";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <NavCalcul>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </NavCalcul>
   );
 }
 

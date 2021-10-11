@@ -4,6 +4,7 @@ import { choice } from "../../utils/tools";
 import MainInfo from "../MainInfo";
 import Form from "../Form";
 import DevisInfos from "./DevisInfos";
+import Steps from "./Steps";
 
 const BoxChoice = () => {
   return (
@@ -21,6 +22,7 @@ const BoxChoice = () => {
           </div>
         ))}
       </div>
+      <Steps />
       <DevisInfos />
       <Form />
     </>
