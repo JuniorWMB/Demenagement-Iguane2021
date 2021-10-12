@@ -3,7 +3,7 @@ import IknowMyVolume from "./IknowMyVolume";
 
 const DevisInfos = () => {
   return (
-    <div className=" h-[1000px]">
+    <div className=" h-auto">
       <IknowMyVolume />
       {/* <IDontKnowMyVolume/> */}
     </div>

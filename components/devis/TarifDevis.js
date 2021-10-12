@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Calendar from "./Calendar";
 import PriceDevis from "./PriceDevis";
+import ProductEmballage from "./ProductEmballage";
 
 const TarifDevis = () => {
   const [startDate, setStartDate] = useState(new Date());
@@ -64,7 +65,8 @@ const TarifDevis = () => {
             informations récuperé.
           </p>
         </div>
-        {startDate || endDate === new Date() ? <PriceDevis /> : null}
+        <PriceDevis />
+        <ProductEmballage />
       </div>
     </div>
   );

@@ -14,7 +14,7 @@ const MainInfo = ({ info, title, picture, subTitle, href }) => {
           priority
         />
         <div className="bg-white dark:bg-gray-800 w-full p-4">
-          <p className="text-indigo-500 text-md font-medium">{title}</p>
+          <p className="text-green-500 text-md font-medium">{title}</p>
           <p className="text-gray-800 dark:text-white text-xl font-medium mb-2">
             {subTitle}
           </p>

@@ -2,7 +2,7 @@ import React from "react";
 
 const Form = () => {
   return (
-    <div className="mt-[30rem] md:mt-[20rem]">
+    <div className="mt-[30rem] md:mt-[10rem]">
       <div className="hidden mx-10 sm:block " id="form" aria-hidden="true">
         <div className="py-5">
           <div className="border-t border-gray-200" />
@@ -38,6 +38,7 @@ const Form = () => {
                         name="first-name"
                         id="first-name"
                         autoComplete="given-name"
+                        placeholder="Marvin"
                         className="mt-1 
                         p-2 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                       />
@@ -55,6 +56,7 @@ const Form = () => {
                         name="last-name"
                         id="last-name"
                         autoComplete="family-name"
+                        placeholder="Green"
                         className="mt-1 
                         p-2 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                       />
@@ -72,6 +74,7 @@ const Form = () => {
                         name="email-address"
                         id="email-address"
                         autoComplete="email"
+                        placeholder="iguanedemenagement@iguanedem.com"
                         className="mt-1 
                         p-2 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                       />
@@ -89,6 +92,7 @@ const Form = () => {
                         name="street-address"
                         id="street-address"
                         autoComplete="street-address"
+                        placeholder="13 rue de l'iguane vert"
                         className="mt-1 focus:ring-green-500 
                         p-2 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                       />
@@ -105,6 +109,7 @@ const Form = () => {
                         type="text"
                         name="city"
                         id="city"
+                        placeholder="Paris"
                         className="mt-1
                         p-2 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                       />
@@ -121,6 +126,7 @@ const Form = () => {
                         type="number"
                         name="phone"
                         id="phone"
+                        placeholder="06 42 42 42 42"
                         // autoComplete="phone"
                         className="mt-1
                         p-2
@@ -143,8 +149,10 @@ const Form = () => {
                       cols="70"
                       rows="10"
                       className="p-2
-                      mt-1 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md
+                      border-green-100 border
+                      mt-1 focus:ring-green-500 focus: border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md
                       "
+                      placeholder="Je souhaite ..."
                     ></textarea>
                   </div>
                 </div>

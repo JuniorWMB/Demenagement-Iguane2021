@@ -67,6 +67,17 @@ import tvGrand from "../public/51-64_Salon/63-TV GRAND ECRAN.svg";
 // import pianoHeavy from "../public/piano.jpg";
 // import coffre from "../public/coffre.jpg";
 
+import verre from "../public/verre.jpg";
+import cartonStandard from "../public/cartonStandard.jpg";
+import cartonPenderie from "../public/cartonPenderie.jpg";
+import cartonLourd from "../public/cartonLourd.jpg";
+import housseRed from "../public/housseRed.jpg";
+import housseTurquoise from "../public/housseTurquoise.jpg";
+import housseBleu from "../public/housseBleu.jpg";
+import cartonBouteilles from "../public/cartonBouteilles.jpg";
+import cartonAssiettes from "../public/cartonAssiettes.jpg";
+import adhesif from "../public/adhesif.jpg";
+
 export let buanderie = [
   { name: "Aspirateur", volume: 0.06, picture: aspirateur },
   { name: "Banc de rangement", volume: 0.18, picture: bancDeRangement },
@@ -206,4 +217,17 @@ export let salon = [
   { name: "Télévision 32 pouces", volume: 0.03, picture: tv },
   { name: "Télévision grand ecran", volume: 0.13, picture: tvGrand },
   { name: "Vaisselier", volume: 1.27, picture: null },
+];
+
+export let emballagesProduct = [
+  { name: "verre", price: "10.90", picture: verre },
+  { name: "Carton standard", price: "1.99", picture: cartonStandard },
+  { name: "Carton penderie", price: "10.00", picture: cartonPenderie },
+  { name: "Carton lourd", price: "1.50", picture: cartonLourd },
+  { name: "Housse rouge", price: "6.00", picture: housseRed },
+  { name: "Housse turquoise", price: "3.50", picture: housseTurquoise },
+  { name: "Housse bleu", price: "4.70", picture: housseBleu },
+  { name: "Carton bouteilles", price: "2.90", picture: cartonBouteilles },
+  { name: "Carton assiettes", price: "12.90", picture: cartonAssiettes },
+  { name: "Adhesif", price: "2.99", picture: adhesif },
 ];
