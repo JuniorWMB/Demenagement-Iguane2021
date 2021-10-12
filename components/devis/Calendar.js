@@ -1,15 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 
 import { DateRangePicker } from "react-date-range";
 import fr from "date-fns/locale/fr";
 
-console.log("here", fr);
-const Calendar = ({ title }) => {
-  const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(new Date());
-
+const Calendar = ({ title, setEndDate, setStartDate, endDate, startDate }) => {
   const handleSelect = (ranges) => {
     setStartDate(ranges.selection.startDate);
     setEndDate(ranges.selection.endDate);

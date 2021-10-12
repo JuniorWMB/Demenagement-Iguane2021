@@ -2,7 +2,7 @@ import React from "react";
 
 const Form = () => {
   return (
-    <>
+    <div className="mt-[30rem] md:mt-[20rem]">
       <div className="hidden mx-10 sm:block " id="form" aria-hidden="true">
         <div className="py-5">
           <div className="border-t border-gray-200" />
@@ -167,7 +167,7 @@ const Form = () => {
           <div className="border-t border-gray-200" />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
