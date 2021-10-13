@@ -18,6 +18,7 @@ const BoxChoice = () => {
               info={c.info}
               picture={c.picture}
               href={c.href}
+              id={c.id}
             />
           </div>
         ))}

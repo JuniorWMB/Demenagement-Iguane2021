@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
-const MainInfo = ({ info, title, picture, subTitle, href }) => {
+const MainInfo = ({ info, title, picture, subTitle, href, id }) => {
   return (
-    <div className=" overflow-hidden rounded-lg h-[400px] w-60 md:w-80 cursor-pointer m-auto ml-4 shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
+    <div
+      className=" overflow-hidden rounded-lg h-[400px] w-60 md:w-80 cursor-pointer m-auto ml-4 shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
+      // onClick={handleChoice}
+    >
       <a href={href} className="w-full block h-full border-2 ">
         <Image
           alt="blog photo"

@@ -10,11 +10,16 @@ import {
   LightBulbIcon,
   LightningBoltIcon,
   QuestionMarkCircleIcon,
-} from "@heroicons/react/solid";
+  PencilAltIcon,
+  CalculatorIcon,
+  CreditCardIcon,
+  TruckIcon,
+  HomeIcon,
+} from "@heroicons/react/outline";
 
 export const infos = [
   {
-    id: 1,
+    // id: 1,
     title: "Déménagement",
     subTitle: ".01",
     info: "Déménagement de particuliers ou professionnels,débarras,monte meuble.",
@@ -22,7 +27,7 @@ export const infos = [
     href: "/devis",
   },
   {
-    id: 2,
+    // id: 2,
     title: "Stockage",
     subTitle: ".02",
     info: "En rack ou au sol dans un entrepôt chauffer et sécuriser. Réception, préparation et expédition de vos marchandises.",
@@ -30,7 +35,7 @@ export const infos = [
     href: "/",
   },
   {
-    id: 3,
+    // id: 3,
     title: "Vente produit",
     subTitle: ".03",
     info: "Nous proposons une large sélection de produits indispensable pour votre déménagement (cartons, adhesifs, housses etc...).",
@@ -53,7 +58,7 @@ export const choice = [
     subTitle: <LightBulbIcon />,
     info: "Vous connaissez votre volume, il vous suffis de le renseigner ci-dessous.",
     picture: manDem,
-    href: "/",
+    href: "",
   },
   {
     id: 2,
@@ -61,7 +66,7 @@ export const choice = [
     subTitle: <LightningBoltIcon />,
     info: "Vous ne connaissez pas  votre volume, il vous suffis de clicker ici et de vous laissez guider.",
     picture: manDemTruck,
-    href: "/",
+    href: "",
   },
   {
     id: 3,
@@ -93,5 +98,33 @@ export const infoPriceDevis = [
     title: "PREMIUM",
     price: "80",
     info: " L'emballages et le déballages de tout vos cartons. Le démontages et remontage de tout vos meubles.",
+  },
+];
+
+export const steps = [
+  {
+    icone: <CalculatorIcon className="h-8 w-8 text-green-900" />,
+    title: "Step 1 Calculateur",
+    info: "  Calculer le volume totale de votre déménagement,grace a notre calculateur de volume.",
+  },
+  {
+    icone: <HomeIcon className="h-8 w-8 text-green-900" />,
+    title: "Step 2 Votre adresse de départ",
+    info: "Indiqué nous votre adresse de départ, afin que l'on puisse calculer la distance entre votre lieu de départ et celui d'arrivée.",
+  },
+  {
+    icone: <TruckIcon className="h-8 w-8 text-green-900" />,
+    title: "Step 3 Votre adresse d'arrivée",
+    info: " Indiqué nous votre adresse de arrivée, afin que l'on puisse calculer la distance entre votre lieu de départ et celui d'arrivée.",
+  },
+  {
+    icone: <CreditCardIcon className="h-8 w-8 text-green-900" />,
+    title: "Step 4 Tarif",
+    info: "Voici le tarif que nous vous proposons après inspection de vos informations.",
+  },
+  {
+    icone: <PencilAltIcon className="h-8 w-8 text-green-900" />,
+    title: "Step 5 Récapitulatif",
+    info: "Récapitulons votre devis.",
   },
 ];
