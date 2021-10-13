@@ -1,4 +1,5 @@
 import React from "react";
+import FormRecap from "./FormRecap";
 
 const DevisRecap = () => {
   return (
@@ -45,93 +46,67 @@ const DevisRecap = () => {
           </p>
         </div>
       </div>
-      <div className="max-w-screen-xl sm:mx-auto">
+      <form
+        action="/success"
+        name="contact"
+        method="post"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        onSubmit="submit"
+        className="max-w-screen-xl sm:mx-auto"
+      >
         <div className="grid grid-cols-1 gap-16 row-gap-8 lg:grid-cols-2">
           <div className="space-y-8">
             <div>
               <p className="mb-4 text-xl font-medium">
-                The quick, brown fox jumps over a lazy dog?
+                Votre adresse de départ pour votre déménagement est
               </p>
-              <p className="text-gray-700">
-                Space, the final frontier. These are the voyages of the Starship
-                Enterprise. Its five-year mission: to explore strange new
-                worlds.
-                <br />
-                <br />
-                Many say exploration is part of our destiny, but it’s actually
-                our duty to future generations.
-              </p>
+              <p className="text-gray-700">13 square des cottages 91300 Evry</p>
             </div>
             <div>
               <p className="mb-4 text-xl font-medium">
-                The first mate and his Skipper too will do?
+                Votre date de démenagement est le
               </p>
-              <p className="text-gray-700">
-                Well, the way they make shows is, they make one show. That
-                show's called a pilot.
-                <br />
-                <br />
-                Then they show that show to the people who make shows, and on
-                the strength of that one show they decide if they're going to
-                make more shows. Some pilots get picked and become television
-                programs.Some don't, become nothing. She starred in one of the
-                ones that became nothing.
-              </p>
+              <p className="text-gray-700">vendredi 13 janvier 2021</p>
             </div>
             <div>
               <p className="mb-4 text-xl font-medium">
-                Is the Space Pope reptilian!?
+                La distance entre votre lieu de départ et d'arrivée est de
               </p>
-              <p className="text-gray-700">
-                A flower in my garden, a mystery in my panties. Heart attack
-                never stopped old Big Bear. I didn't even know we were calling
-                him Big Bear.
-              </p>
+              <p className="text-gray-700">13 kilomètres</p>
             </div>
           </div>
           <div className="space-y-8">
             <div>
               <p className="mb-4 text-xl font-medium">
-                How much money you got on you?
+                Votre adresse de d'arrivée pour votre déménagement est
               </p>
-              <p className="text-gray-700">
-                The first mate and his Skipper too will do their very best to
-                make the others comfortable in their tropic island nest.
-                <br />
-                <br />
-                Michael Knight a young loner on a crusade to champion the cause
-                of the innocent. The helpless. The powerless in a world of
-                criminals who operate above the law. Here he comes Here comes
-                Speed Racer. He's a demon on wheels.
-              </p>
+              <p className="text-gray-700">13 rue greenwood 91200 Juvisy</p>
             </div>
             <div>
               <p className="mb-4 text-xl font-medium">
-                Galaxies Orion's sword globular star cluster?
+                Votre date de livraison est le
               </p>
-              <p className="text-gray-700">
-                A business big enough that it could be listed on the NASDAQ goes
-                belly up. Disappears!
-                <br />
-                <br />
-                It ceases to exist without me. No, you clearly don't know who
-                you're talking to, so let me clue you in.
-              </p>
+              <p className="text-gray-700">Samedi 17 juillet 2021</p>
             </div>
             <div>
               <p className="mb-4 text-xl font-medium">
-                When has justice ever been as simple as a rule book?
+                Vous avez un volume total de
               </p>
-              <p className="text-gray-700">
-                This is not about revenge. This is about justice. A lot of
-                things can change in twelve years, Admiral. Well, that's
-                certainly good to know. About four years. I got tired of hearing
-                how young I looked.
+              <p className="text-gray-700">2 m3</p>
+              <p className="mb-4 text-xl font-medium">Vous avez pris</p>
+              <p className="text-gray-700">3 produits</p>
+            </div>
+            <div>
+              <p className="mb-4 text-xl font-medium">
+                Votre démenagement vous couteras
               </p>
+              <p className="text-green-700 text-3xl font-bold">140€</p>
             </div>
           </div>
         </div>
-      </div>
+        <FormRecap />
+      </form>
     </div>
   );
 };
