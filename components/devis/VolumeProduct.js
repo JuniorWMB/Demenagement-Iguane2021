@@ -18,6 +18,7 @@ import FormDevis from "./FormDevis";
 import Form from "../Form";
 import FormDevisEnd from "./FormDevisEnd";
 import TarifDevis from "./TarifDevis";
+import DevisRecap from "./DevisRecap";
 
 const VolumeProduct = () => {
   const { navCalculDevis, setNavCalculDevis } = useContext(ContextStore);
@@ -481,6 +482,7 @@ const VolumeProduct = () => {
       {navCalculDevis === 1 ? <FormDevis /> : null}
       {navCalculDevis === 2 ? <FormDevisEnd /> : null}
       {navCalculDevis === 3 ? <TarifDevis /> : null}
+      {navCalculDevis === 4 ? <DevisRecap /> : null}
     </div>
   );
 };

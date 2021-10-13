@@ -72,3 +72,26 @@ export const choice = [
     href: "#form",
   },
 ];
+
+export const infoPriceDevis = [
+  {
+    title: "BASIC",
+    price: "30",
+    info: " La manutention de vos meubles depuis votre appartement jusque dans le camion",
+  },
+  {
+    title: "ECO",
+    price: "45",
+    info: " L'emballages et le déballages de tout vos cartons. Le démontages et remontage de tout vos meubles.",
+  },
+  {
+    title: "SECURITE",
+    price: "60",
+    info: " L'emballages et le déballages de tout vos cartons. Le démontages et remontage de tout vos meubles.",
+  },
+  {
+    title: "PREMIUM",
+    price: "80",
+    info: " L'emballages et le déballages de tout vos cartons. Le démontages et remontage de tout vos meubles.",
+  },
+];
