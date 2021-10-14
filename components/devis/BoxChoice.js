@@ -39,12 +39,12 @@ const BoxChoice = () => {
                 height="24"
               />
             </svg>
-            <span className="relative">Choissisez</span>
+            <span className="relative">Calculé</span>
           </span>{" "}
-          vos emballages et vos fournitures
+          votre volume et peaufiné votre déménagement
         </h2>
         <p className="text-base text-gray-700 md:text-lg">
-          Nous vous proposons different types de carton pour votre déménagement.
+          Nous vous proposons different types de meuble.
         </p>
       </div>
       <div className="flex justify-center mt-36 h-[600px] w-full items-center flex-col overflow-hidden overflow-x-auto flex-wrap md:overscroll-none ">

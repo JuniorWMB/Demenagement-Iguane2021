@@ -21,7 +21,8 @@ import TarifDevis from "./TarifDevis";
 import DevisRecap from "./DevisRecap";
 
 const VolumeProduct = () => {
-  const { navCalculDevis, setNavCalculDevis } = useContext(ContextStore);
+  const { navCalculDevis, setNavCalculDevisproducts, products, setProducts } =
+    useContext(ContextStore);
 
   const [toggleState, setToggleState] = useState(1);
 
@@ -29,16 +30,19 @@ const VolumeProduct = () => {
     setToggleState(index);
   };
 
+  const [showSide, setShowSide] = useState(false);
+  const [disable, setDisable] = useState(false);
+
+  let total = 0;
+  for (let i = 0; i < products.length; i++) {
+    total = total + Number(products[i].volume * products[i].quantity);
+  }
+
   return (
     <div className=" h-3/4 box-content  md:w-full">
       {navCalculDevis === 0 ? (
         <div className="flex flex-col h-full break-all  md:">
-          <div
-            // style={{
-            //   borderBottom: "2px solid #eaeaea",
-            // }}
-            className="flex-wrap "
-          >
+          <div className="flex-wrap ">
             <ul className="flex  border  cursor-pointer flex-wrap  md:flex-nowrap  ">
               <li
                 className={
@@ -144,7 +148,6 @@ const VolumeProduct = () => {
           </div>
 
           {/* logic buanderie */}
-          {}
           <div
             className={
               toggleState === 1
@@ -155,12 +158,38 @@ const VolumeProduct = () => {
             {buanderie.map((item, i) => (
               <div
                 key={i}
+                onClick={() => {
+                  //créer une copie
+                  setDisable(true);
+                  const newProduct = [...products];
+                  let isFound = false;
+                  for (let i = 0; i < products.length; i++) {
+                    if (products[i].id === item.id) {
+                      newProduct[i].quantity++;
+                      isFound = true;
+                      break;
+                    }
+                  }
+                  if (isFound === false) {
+                    //modifier la copie
+                    newProduct.push({
+                      name: item.name,
+                      volume: item.volume,
+                      quantity: "1",
+                      id: item.id,
+                    });
+                  }
+
+                  //mettre à jour le state
+
+                  setProducts(newProduct);
+                }}
                 className="flex shadow-lg rounded-2xl m-2 p-8 bg-white dark:bg-gray-900 w-60 h-56  relative"
               >
                 <div className="w-full h-full text-center">
                   <div className="flex h-full flex-col justify-between">
                     <Image alt={item.name} src={item.picture} width={10} />
-                    <p className="absolute text-sm italic dark:text-white text-indigo-500 text-md font-medium top-2 right-2">
+                    <p className="absolute text-sm italic dark:text-white text-green-500 text-md font-medium top-2 right-2">
                       {item.volume}m3
                     </p>
 
@@ -186,6 +215,32 @@ const VolumeProduct = () => {
             {bureau.map((desk, i) => (
               <div
                 key={i}
+                onClick={() => {
+                  //créer une copie
+                  setDisable(true);
+                  const newProduct = [...products];
+                  let isFound = false;
+                  for (let i = 0; i < products.length; i++) {
+                    if (products[i].id === desk.id) {
+                      newProduct[i].quantity++;
+                      isFound = true;
+                      break;
+                    }
+                  }
+                  if (isFound === false) {
+                    //modifier la copie
+                    newProduct.push({
+                      name: desk.name,
+                      volume: desk.volume,
+                      quantity: "1",
+                      id: desk.id,
+                    });
+                  }
+
+                  //mettre à jour le state
+
+                  setProducts(newProduct);
+                }}
                 className="flex shadow-lg rounded-2xl m-2 p-8 bg-white dark:bg-gray-900 w-60 h-56  relative"
               >
                 <div className="w-full h-full text-center">
@@ -194,7 +249,7 @@ const VolumeProduct = () => {
                       src={desk.picture === null ? notFound : desk.picture}
                       alt={desk.name}
                     />
-                    <p className="absolute text-sm italic dark:text-white text-indigo-500 text-md font-medium top-2 right-2">
+                    <p className="absolute text-sm italic dark:text-white text-green-500 text-md font-medium top-2 right-2">
                       {desk.volume}m3
                     </p>
 
@@ -228,7 +283,7 @@ const VolumeProduct = () => {
                       src={desk.picture === null ? notFound : desk.picture}
                       alt={desk.name}
                     />
-                    <p className="absolute text-sm italic dark:text-white text-indigo-500 text-md font-medium top-2 right-2">
+                    <p className="absolute text-sm italic dark:text-white text-green-500 text-md font-medium top-2 right-2">
                       {desk.volume}m3
                     </p>
 
@@ -262,7 +317,7 @@ const VolumeProduct = () => {
                       src={desk.picture === null ? notFound : desk.picture}
                       alt={desk.name}
                     />
-                    <p className="absolute text-sm italic dark:text-white text-indigo-500 text-md font-medium top-2 right-2">
+                    <p className="absolute text-sm italic dark:text-white text-green-500 text-md font-medium top-2 right-2">
                       {desk.volume}m3
                     </p>
 
@@ -295,7 +350,7 @@ const VolumeProduct = () => {
                       src={desk.picture === null ? notFound : desk.picture}
                       alt={desk.name}
                     />
-                    <p className="absolute text-sm italic dark:text-white text-indigo-500 text-md font-medium top-2 right-2">
+                    <p className="absolute text-sm italic dark:text-white text-green-500 text-md font-medium top-2 right-2">
                       {desk.volume}m3
                     </p>
 
@@ -328,7 +383,7 @@ const VolumeProduct = () => {
                       src={desk.picture === null ? notFound : desk.picture}
                       alt={desk.name}
                     />
-                    <p className="absolute text-sm italic dark:text-white text-indigo-500 text-md font-medium top-2 right-2">
+                    <p className="absolute text-sm italic dark:text-white text-green-500 text-md font-medium top-2 right-2">
                       {desk.volume}m3
                     </p>
 
@@ -362,7 +417,7 @@ const VolumeProduct = () => {
                       src={desk.picture === null ? notFound : desk.picture}
                       alt={desk.name}
                     />
-                    <p className="absolute text-sm italic dark:text-white text-indigo-500 text-md font-medium top-2 right-2">
+                    <p className="absolute text-sm italic dark:text-white text-green-500 text-md font-medium top-2 right-2">
                       {desk.volume}m3
                     </p>
 
@@ -396,7 +451,7 @@ const VolumeProduct = () => {
                       src={desk.picture === null ? notFound : desk.picture}
                       alt={desk.name}
                     />
-                    <p className="absolute text-sm italic dark:text-white text-indigo-500 text-md font-medium top-2 right-2">
+                    <p className="absolute text-sm italic dark:text-white text-green-500 text-md font-medium top-2 right-2">
                       {desk.volume}m3
                     </p>
 
@@ -430,7 +485,7 @@ const VolumeProduct = () => {
                       src={desk.picture === null ? notFound : desk.picture}
                       alt={desk.name}
                     />
-                    <p className="absolute text-sm italic dark:text-white text-indigo-500 text-md font-medium top-2 right-2">
+                    <p className="absolute text-sm italic dark:text-white text-green-500 text-md font-medium top-2 right-2">
                       {desk.volume}m3
                     </p>
 
@@ -464,7 +519,7 @@ const VolumeProduct = () => {
                       src={desk.picture === null ? notFound : desk.picture}
                       alt={desk.name}
                     />
-                    <p className="absolute text-sm italic dark:text-white text-indigo-500 text-md font-medium top-2 right-2">
+                    <p className="absolute text-sm italic dark:text-white text-green-500 text-md font-medium top-2 right-2">
                       {desk.volume}m3
                     </p>
 
