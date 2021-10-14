@@ -1,7 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+// import { ContextStore } from "../utils/tools";
 import Image from "next/image";
 
+// const { showInput, setShowInput } = useContext()
+
 const MainInfo = ({ info, title, picture, subTitle, href, id }) => {
+  // const { showInput } = useContext(ContextStore);
+
   return (
     <div
       className=" overflow-hidden rounded-lg h-[400px] w-60 md:w-80 cursor-pointer m-auto ml-4 shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
