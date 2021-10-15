@@ -48,7 +48,7 @@ export const navigation = [
   { name: "Accueil", href: "/" },
   { name: "Boutiques", href: "/shop" },
   { name: "Contact", href: "#form" },
-  { name: "FAQ", href: "#" },
+  { name: "Devis", href: "/devis" },
 ];
 
 export const choice = [
@@ -58,7 +58,7 @@ export const choice = [
     subTitle: <LightBulbIcon />,
     info: "Vous connaissez votre volume, il vous suffis de le renseigner ci-dessous.",
     picture: manDem,
-    href: "",
+    // href: "",
   },
   {
     id: 2,
@@ -66,7 +66,7 @@ export const choice = [
     subTitle: <LightningBoltIcon />,
     info: "Vous ne connaissez pas  votre volume, il vous suffis de clicker ici et de vous laissez guider.",
     picture: manDemTruck,
-    href: "",
+    href: "#devis",
   },
   {
     id: 3,

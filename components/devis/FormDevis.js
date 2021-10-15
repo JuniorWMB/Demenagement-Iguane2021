@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Box1 from "../../public/box1.jpg";
+// import Autocomplete from "react-google-autocomplete";
+// import PlacesAutocomplete, {
+//   geocodeByAddress,
+//   getLatLng,
+// } from "react-places-autocomplete";
+import GooglePlacesAutocomplete from "react-google-places-autocomplete";
 
 const FormDevis = () => {
+  const [value, setValue] = useState(null);
+
   return (
     <>
       {/* <!-- Container --> */}
@@ -114,12 +122,32 @@ const FormDevis = () => {
                   >
                     Adresse
                   </label>
-                  <input
+                  {/* <input
                     className="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
                     id="lastName"
                     type="text"
                     placeholder="Adresse"
-                  />
+                  /> */}
+                  <GooglePlacesAutocomplete
+                    className="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                    id="lastName"
+                    placeholder="Adresse test"
+                    apiKey={process.env.GOOGLE_MAPS_APIKEY}
+                    selectProps={{
+                      value,
+                      onchange: setValue,
+                    }}
+                    apiOptions={{ language: "fr", region: "fr" }}
+                    debounce={100}
+
+                    // apiKey={process.env.GOOGLE_MAPS_APIKEY}
+                    // nearbyPlacesApi="GooglePlacesSearch"
+                    // debounce={400}
+                    // query={{
+                    //   key: process.env.GOOGLE_MAPS_APIKEY,
+                    //   language: "fr",
+                    // }}
+                  ></GooglePlacesAutocomplete>
                 </div>
                 <hr className="mb-6 border-t" />
               </form>

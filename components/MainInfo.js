@@ -1,18 +1,36 @@
 import React, { useEffect, useState, useContext } from "react";
-// import { ContextStore } from "../utils/tools";
+import { ContextStore } from "../context/context";
 import Image from "next/image";
-
-// const { showInput, setShowInput } = useContext()
+import Modal from "./devis/Modal";
 
 const MainInfo = ({ info, title, picture, subTitle, href, id }) => {
-  // const { showInput } = useContext(ContextStore);
+  const { showInput, setShowInput } = useContext(ContextStore);
+
+  // const [showModal, setShowModal] = useState();
+
+  // const handleChoice = (e) => {
+  //   if (id === 1) {
+  //     e.preventDefault();
+  //     setShowInput(!showInput);
+  //     setShowModal(<Modal />);
+  //     console.log("1");
+  //   } else if (id === 2) {
+  //     e.preventDefault();
+  //     console.log("2");
+  //   } else if (id === 3) {
+  //     e.preventDefault();
+  //     console.log("3");
+  //   }
+  // };
 
   return (
-    <div
-      className=" overflow-hidden rounded-lg h-[400px] w-60 md:w-80 cursor-pointer m-auto ml-4 shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
-      // onClick={handleChoice}
-    >
-      <a href={href} className="w-full block h-full border-2 ">
+    <div className=" overflow-hidden rounded-lg h-[400px] w-60 md:w-80 cursor-pointer m-auto ml-4 shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
+      {/* <showModal /> */}
+      <a
+        href={href}
+        className="w-full block h-full border-2 "
+        // onClick={handleChoice}
+      >
         <Image
           alt="blog photo"
           src={picture}
