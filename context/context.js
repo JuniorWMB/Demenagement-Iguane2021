@@ -22,12 +22,17 @@ export const NavCalcul = ({ children }) => {
   const [distancePortageArrived, setDistancePortageArrived] = useState();
   const [addressArrived, setAddressArrived] = useState();
 
+  //Choice your volum
+  const [iChoiceMyVolume, setIChoiceMyVolume] = useState("");
+
   //portage total
   const [portageTotalStarted, setPortageTotalStarted] = useState();
   const [portageTotalArrived, setPortageTotalArrived] = useState();
 
   // calcul total
-  let total = 0;
+  let totalVolume = 0;
+  const [volumeCalculDem, setVolumeCalculDem] = useState();
+
   // calcul totalStart
   let totalStarted = 0;
   // calcul total
@@ -62,13 +67,17 @@ export const NavCalcul = ({ children }) => {
         setDistancePortageStarted,
         addressStarted,
         setAddressStarted,
-        total,
+        // totalVolume,
         portageTotalStarted,
         setPortageTotalStarted,
         portageTotalArrived,
         setPortageTotalArrived,
         totalStarted,
         totalArrived,
+        iChoiceMyVolume,
+        setIChoiceMyVolume,
+        volumeCalculDem,
+        setVolumeCalculDem,
       }}
     >
       {children}

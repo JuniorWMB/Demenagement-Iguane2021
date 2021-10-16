@@ -9,12 +9,18 @@ const BasketVolume = () => {
     setProducts,
     showInput,
     setShowInput,
+    // totalVolume,
+    iChoiceMyVolume,
+    setIChoiceMyVolume,
+    setVolumeCalculDem,
   } = useContext(ContextStore);
+  let totalVolume = 0;
 
-  let total = 0;
   for (let i = 0; i < products.length; i++) {
-    total = total + Number(products[i].volume * products[i].quantity);
+    totalVolume =
+      totalVolume + Number(products[i].volume * products[i].quantity);
   }
+  setVolumeCalculDem(totalVolume.toFixed(2));
   return (
     <>
       {navCalculDevis === 0 ? (
@@ -69,13 +75,15 @@ const BasketVolume = () => {
               text-white
             "
             >
-              Volume: {total.toFixed(2)}
+              Volume: {totalVolume.toFixed(2)}
             </p>
           </div>
           {showInput && (
             <input
-              type="text"
+              type="number"
               className=" bottom-0 sticky border border-red-900 w-full"
+              value={iChoiceMyVolume}
+              onChange={(e) => setIChoiceMyVolume(e.target.value)}
             />
           )}
         </div>

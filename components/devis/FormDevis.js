@@ -22,34 +22,46 @@ const FormDevis = () => {
     setDistancePortageStarted,
     addressStarted,
     setAddressStarted,
+    volumeCalculDem,
+    // totalStarted,
+    setPortageTotalStarted,
+    iChoiceMyVolume,
   } = useContext(ContextStore);
+  let totalStarted = 0;
 
   if (distancePortageStarted === "De 15m à 29m") {
-    totalStart = totalStart + 30 * (Number(totalBasket) + Number(volumeCalcul));
-    setPortageTotalEnd(totalStart);
+    totalStarted =
+      totalStarted + 30 * (Number(volumeCalculDem) + Number(iChoiceMyVolume));
+    setPortageTotalStarted(totalStarted);
   } else if (distancePortageStarted === "Moins de 15m") {
-    totalStart = totalStart + 15 * (Number(totalBasket) + Number(volumeCalcul));
-    setPortageTotalEnd(totalStart);
+    totalStarted =
+      totalStarted + 15 * (Number(volumeCalculDem) + Number(iChoiceMyVolume));
+    setPortageTotalStarted(totalStarted);
   } else if (distancePortageStarted === "De 30m à 39m") {
-    totalStart = totalStart + 39 * (Number(totalBasket) + Number(volumeCalcul));
-    setPortageTotalEnd(totalStart);
+    totalStarted =
+      totalStarted + 39 * (Number(volumeCalculDem) + Number(iChoiceMyVolume));
+    setPortageTotalStarted(totalStarted);
   } else if (distancePortageStarted === "De 40m à 49m") {
-    totalStart = totalStart + 49 * (Number(totalBasket) + Number(volumeCalcul));
-    setPortageTotalEnd(totalStart);
-
-    console.log("distancePortageStarted test 3:", portageTotalEnd);
+    totalStarted =
+      totalStarted + 49 * (Number(volumeCalculDem) + Number(iChoiceMyVolume));
+    setPortageTotalStarted(totalStarted);
   } else if (distancePortageStarted === "De 50m à 59m") {
-    totalStart = totalStart + 59 * (Number(totalBasket) + Number(volumeCalcul));
-    setPortageTotalEnd(totalStart);
+    totalStarted =
+      totalStarted + 59 * (Number(volumeCalculDem) + Number(iChoiceMyVolume));
+    setPortageTotalStarted(totalStarted);
   } else if (distancePortageStarted === "De 60m à 79m") {
-    totalStart = totalStart + 79 * (Number(totalBasket) + Number(volumeCalcul));
-    setPortageTotalEnd(totalStart);
+    totalStarted =
+      totalStarted + 79 * (Number(volumeCalculDem) + Number(iChoiceMyVolume));
+    setPortageTotalStarted(totalStarted);
   } else if (distancePortageStarted === "De 80m à 100m") {
-    totalStart =
-      totalStart + 100 * (Number(totalBasket) + Number(volumeCalcul));
-    setPortageTotalEnd(totalStart);
+    totalStarted =
+      totalStarted + 100 * (Number(volumeCalculDem) + Number(iChoiceMyVolume));
+    setPortageTotalStarted(totalStarted);
   }
 
+  console.log("la=>>>", [iChoiceMyVolume, volumeCalculDem, totalStarted]);
+  console.log("juju", totalStarted.toFixed(2));
+  console.log("lili", distancePortageStarted);
   return (
     <>
       {/* <!-- Container --> */}
@@ -155,11 +167,11 @@ const FormDevis = () => {
                   >
                     <option value="Moins de 15m">Moins de 15m</option>
                     <option value="De 15m à 29m">De 15m à 29m</option>
-                    <option value="De 30 à 39">De 30m à 39m</option>
-                    <option value="De 40 à 49m">de 40m à 49m</option>
-                    <option value="De 50m à 59m">de 50m à 59m</option>
-                    <option value="De 60m à 70m">de 60m à 79m</option>
-                    <option value="De 80m à 100m">de 80m à 100m</option>
+                    <option value="De 30m à 39m">De 30m à 39m</option>
+                    <option value="De 40m à 49m">De 40m à 49m</option>
+                    <option value="De 50m à 59m">De 50m à 59m</option>
+                    <option value="De 60m à 79m">De 60m à 79m</option>
+                    <option value="De 80m à 100m">De 80m à 100m</option>
                   </select>
                 </div>
                 <div className="mb-4">
@@ -179,7 +191,7 @@ const FormDevis = () => {
                     className="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
                     id="lastName"
                     placeholder="Adresse test"
-                    apiKey=""
+                    apiKey="AIzaSyCKTyO97QOyTHdnaxmKXSqJQCaxS_TB29c"
                     selectProps={{
                       value,
                       onchange: setValue,
