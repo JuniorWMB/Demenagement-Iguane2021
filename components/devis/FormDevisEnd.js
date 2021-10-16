@@ -1,8 +1,33 @@
-import React from "react";
+import React, { useContext } from "react";
 import Image from "next/image";
 import Box1 from "../../public/dempicture.jpg";
+import { ContextStore } from "../../context/context";
 
 const FormDevisEnd = () => {
+  const {
+    accesTruckArrived,
+    setAccesTruckArrived,
+    stairArrived,
+    setStairArrived,
+    LiftArrived,
+    setLiftArrived,
+    distancePortageArrived,
+    setDistancePortageArrived,
+    addressArrived,
+    setAddressArrived,
+  } = useContext(ContextStore);
+
+  console.log([
+    accesTruckArrived,
+    setAccesTruckArrived,
+    stairArrived,
+    setStairArrived,
+    LiftArrived,
+    setLiftArrived,
+    distancePortageArrived,
+    setDistancePortageArrived,
+  ]);
+
   return (
     <>
       <div className="container mx-auto">
@@ -40,6 +65,8 @@ const FormDevisEnd = () => {
                       id="firstName"
                       type="text"
                       placeholder="Adresse"
+                      value={accesTruckArrived}
+                      onChange={(e) => setAccesTruckArrived(e.target.value)}
                     >
                       <option value="possible">Possible</option>
                       <option value="difficile">Difficile</option>
@@ -58,13 +85,15 @@ const FormDevisEnd = () => {
                       id="lastName"
                       type="text"
                       placeholder="Etage"
+                      value={stairArrived}
+                      onChange={(e) => setStairArrived(e.target.value)}
                     >
-                      <option value="0">0</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="4">5</option>
+                      <option value="rdc">rdc</option>
+                      <option value="1ére étage">1</option>
+                      <option value="2éme étages">2</option>
+                      <option value="3éme étages">3</option>
+                      <option value="4éme étages">4</option>
+                      <option value="5éme étages">5</option>
                     </select>
                     {/* test */}
                     <label
@@ -78,6 +107,8 @@ const FormDevisEnd = () => {
                       id="lastName"
                       type="text"
                       placeholder="Ascenseur"
+                      value={LiftArrived}
+                      onChange={(e) => setLiftArrived(e.target.value)}
                     >
                       <option value="oui">Oui</option>
                       <option value="non">Non</option>
@@ -96,14 +127,16 @@ const FormDevisEnd = () => {
                     id="lastName"
                     type="text"
                     placeholder="Etage"
+                    value={distancePortageArrived}
+                    onChange={(e) => setDistancePortageArrived(e.target.value)}
                   >
-                    <option value="under15">Moins de 15m</option>
-                    <option value="between15and29">De 15m à 29m</option>
-                    <option value="between30and39">De 30m à 39m</option>
-                    <option value="between40and49">de 40m à 49m</option>
-                    <option value="between50and59">de 50m a 59m</option>
-                    <option value="between60and69">de 60m a 79m</option>
-                    <option value="between80and100">de 80m a 100m</option>
+                    <option value="Moins de 15m">Moins de 15m</option>
+                    <option value="De 15m à 29m">De 15m à 29m</option>
+                    <option value="De 30m à 39m">De 30m à 39m</option>
+                    <option value="De 40m à 49m">de 40m à 49m</option>
+                    <option value="De 50m à 59m">de 50m à 59m</option>
+                    <option value="De 60m à 79m">de 60m à 79m</option>
+                    <option value="De 80m à 100m">de 80m à 100m</option>
                   </select>
                 </div>
                 <div className="mb-4">

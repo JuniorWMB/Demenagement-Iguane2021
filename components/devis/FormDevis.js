@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Image from "next/image";
 import Box1 from "../../public/box1.jpg";
 // import Autocomplete from "react-google-autocomplete";
@@ -7,9 +7,48 @@ import Box1 from "../../public/box1.jpg";
 //   getLatLng,
 // } from "react-places-autocomplete";
 import GooglePlacesAutocomplete from "react-google-places-autocomplete";
+import { ContextStore } from "../../context/context";
 
 const FormDevis = () => {
   const [value, setValue] = useState(null);
+  const {
+    accesTruckStarted,
+    setAccesTruckStarted,
+    stairStarted,
+    setStairStarted,
+    LiftStarted,
+    setLiftStarted,
+    distancePortageStarted,
+    setDistancePortageStarted,
+    addressStarted,
+    setAddressStarted,
+  } = useContext(ContextStore);
+
+  if (distancePortageStarted === "De 15m à 29m") {
+    totalStart = totalStart + 30 * (Number(totalBasket) + Number(volumeCalcul));
+    setPortageTotalEnd(totalStart);
+  } else if (distancePortageStarted === "Moins de 15m") {
+    totalStart = totalStart + 15 * (Number(totalBasket) + Number(volumeCalcul));
+    setPortageTotalEnd(totalStart);
+  } else if (distancePortageStarted === "De 30m à 39m") {
+    totalStart = totalStart + 39 * (Number(totalBasket) + Number(volumeCalcul));
+    setPortageTotalEnd(totalStart);
+  } else if (distancePortageStarted === "De 40m à 49m") {
+    totalStart = totalStart + 49 * (Number(totalBasket) + Number(volumeCalcul));
+    setPortageTotalEnd(totalStart);
+
+    console.log("distancePortageStarted test 3:", portageTotalEnd);
+  } else if (distancePortageStarted === "De 50m à 59m") {
+    totalStart = totalStart + 59 * (Number(totalBasket) + Number(volumeCalcul));
+    setPortageTotalEnd(totalStart);
+  } else if (distancePortageStarted === "De 60m à 79m") {
+    totalStart = totalStart + 79 * (Number(totalBasket) + Number(volumeCalcul));
+    setPortageTotalEnd(totalStart);
+  } else if (distancePortageStarted === "De 80m à 100m") {
+    totalStart =
+      totalStart + 100 * (Number(totalBasket) + Number(volumeCalcul));
+    setPortageTotalEnd(totalStart);
+  }
 
   return (
     <>
@@ -49,6 +88,8 @@ const FormDevis = () => {
                       id="firstName"
                       type="text"
                       placeholder="Adresse"
+                      value={accesTruckStarted}
+                      onChange={(e) => setAccesTruckStarted(e.target.value)}
                     >
                       <option value="possible">Possible</option>
                       <option value="difficile">Difficile</option>
@@ -67,13 +108,15 @@ const FormDevis = () => {
                       id="lastName"
                       type="text"
                       placeholder="Etage"
+                      value={stairStarted}
+                      onChange={(e) => setStairStarted(e.target.value)}
                     >
-                      <option value="0">0</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="4">5</option>
+                      <option value="rdc">0</option>
+                      <option value="1er étage">1</option>
+                      <option value="2éme étages">2</option>
+                      <option value="3éme étages">3</option>
+                      <option value="4éme étages">4</option>
+                      <option value="5éme étages">5</option>
                     </select>
                     {/* test */}
                     <label
@@ -87,6 +130,8 @@ const FormDevis = () => {
                       id="lastName"
                       type="text"
                       placeholder="Ascenseur"
+                      value={LiftStarted}
+                      onChange={(e) => setLiftStarted(e.target.value)}
                     >
                       <option value="oui">Oui</option>
                       <option value="non">Non</option>
@@ -105,14 +150,16 @@ const FormDevis = () => {
                     id="lastName"
                     type="text"
                     placeholder="Etage"
+                    value={distancePortageStarted}
+                    onChange={(e) => setDistancePortageStarted(e.target.value)}
                   >
-                    <option value="under15">Moins de 15m</option>
-                    <option value="between15and29">De 15m à 29m</option>
-                    <option value="between30and39">De 30m à 39m</option>
-                    <option value="between40and49">de 40m à 49m</option>
-                    <option value="between50and59">de 50m a 59m</option>
-                    <option value="between60and69">de 60m a 79m</option>
-                    <option value="between80and100">de 80m a 100m</option>
+                    <option value="Moins de 15m">Moins de 15m</option>
+                    <option value="De 15m à 29m">De 15m à 29m</option>
+                    <option value="De 30 à 39">De 30m à 39m</option>
+                    <option value="De 40 à 49m">de 40m à 49m</option>
+                    <option value="De 50m à 59m">de 50m à 59m</option>
+                    <option value="De 60m à 70m">de 60m à 79m</option>
+                    <option value="De 80m à 100m">de 80m à 100m</option>
                   </select>
                 </div>
                 <div className="mb-4">
@@ -132,7 +179,7 @@ const FormDevis = () => {
                     className="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
                     id="lastName"
                     placeholder="Adresse test"
-                    apiKey={process.env.GOOGLE_MAPS_APIKEY}
+                    apiKey=""
                     selectProps={{
                       value,
                       onchange: setValue,
