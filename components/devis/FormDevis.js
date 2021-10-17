@@ -2,15 +2,29 @@ import React, { useState, useContext } from "react";
 import Image from "next/image";
 import Box1 from "../../public/box1.jpg";
 // import Autocomplete from "react-google-autocomplete";
-// import PlacesAutocomplete, {
-//   geocodeByAddress,
-//   getLatLng,
-// } from "react-places-autocomplete";
+import PlacesAutocomplete, {
+  geocodeByAddress,
+  getLatLng,
+} from "react-places-autocomplete";
 import GooglePlacesAutocomplete from "react-google-places-autocomplete";
 import { ContextStore } from "../../context/context";
 
 const FormDevis = () => {
-  const [value, setValue] = useState(null);
+  // const [value, setValue] = useState(null);
+
+  // const handleChange = (value) => {
+  //   setAddressStarted(value);
+  // };
+
+  const handleSelectEnd = async (value) => {
+    const results = await geocodeByAddress(value);
+    const latLong = await getLatLng(results[0]);
+    console.log("testcoor", latLong);
+    setCityEnd(value);
+    setCoordinatesEnd(latLong);
+    setCoordinateLatEnd(latLong.lat);
+    setCoordinateLongEnd(latLong.lng);
+  };
   const {
     accesTruckStarted,
     setAccesTruckStarted,
@@ -187,26 +201,86 @@ const FormDevis = () => {
                     type="text"
                     placeholder="Adresse"
                   /> */}
-                  <GooglePlacesAutocomplete
+                  <PlacesAutocomplete
+                    value={addressStarted}
+                    onChange={setAddressStarted || ""}
+                    onSelect={handleSelectEnd}
+                    // apiKey="AIzaSyDjkkPohdUpPKd_FEc2mubVvaZeSIviEZY"
+                  >
+                    {({
+                      getInputProps,
+                      suggestions,
+                      getSuggestionItemProps,
+                      loading,
+                    }) => (
+                      <div key={suggestions.description} className="inputStart">
+                        <input
+                          style={{ width: "520px" }}
+                          {...getInputProps({
+                            placeholder: "Ici votre adresse d'arrivée...",
+                            className: "location-search-input",
+                          })}
+                        />
+                        <div className="autocomplete-dropdown-container">
+                          {loading && <div>Loading...</div>}
+                          {suggestions.map((suggestion, i) => {
+                            const className = suggestion.active
+                              ? "suggestion-item--active"
+                              : "suggestion-item";
+                            // inline style for demonstration purpose
+                            const style = suggestion.active
+                              ? {
+                                  backgroundColor: "#fafafa",
+                                  cursor: "pointer",
+                                }
+                              : {
+                                  backgroundColor: "#ffffff",
+                                  cursor: "pointer",
+                                };
+                            return (
+                              <div
+                                key={i}
+                                {...getSuggestionItemProps(suggestion, {
+                                  className,
+                                  style,
+                                })}
+                              >
+                                <span className="textDropdown">
+                                  {suggestion.description}
+                                </span>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    )}
+                  </PlacesAutocomplete>
+
+                  {/* <GooglePlacesAutocomplete
                     className="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
                     id="lastName"
                     placeholder="Adresse test"
-                    apiKey=""
+                    apiKey={process.env.GOOGLE_MAPS_APIKEYBIS}
+                    apiKey="AIzaSyDjkkPohdUpPKd_FEc2mubVvaZeSIviEZY"
                     selectProps={{
-                      value,
-                      onchange: setValue,
+                      value: addressStarted,
+                      onchange: setAddressStarted,
                     }}
+                    value={addressStarted}
+                    onChange={handleChange}
+                    onSelect={handleSelect}
                     apiOptions={{ language: "fr", region: "fr" }}
                     debounce={100}
 
-                    // apiKey={process.env.GOOGLE_MAPS_APIKEY}
-                    // nearbyPlacesApi="GooglePlacesSearch"
-                    // debounce={400}
-                    // query={{
-                    //   key: process.env.GOOGLE_MAPS_APIKEY,
-                    //   language: "fr",
-                    // }}
-                  ></GooglePlacesAutocomplete>
+                    apiKey={process.env.GOOGLE_MAPS_APIKEY}
+                    nearbyPlacesApi="GooglePlacesSearch"
+                    debounce={400}
+                    query={{
+                      key: process.env.GOOGLE_MAPS_APIKEY,
+                      language: "fr",
+                    }}
+                  >
+                  </GooglePlacesAutocomplete> */}
                 </div>
                 <hr className="mb-6 border-t" />
               </form>
